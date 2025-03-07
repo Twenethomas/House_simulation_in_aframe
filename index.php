@@ -59,7 +59,7 @@
         <a-box position="17 -0.1 -4" color="rgba(225, 225, 225, 0.149)" repeat="30 30" rotation="0 0 90" width="0.1" height="5" depth="5" scale="1 11 11" src="#wsbc">
         </a-box>
         <!-- grass -->
-        <a-box position="29 -0.4 1"  repeat="20 20" rotation="0 0 90" width="0.5" height="5" depth="5" scale="1 21 15" src="#wsbc">
+        <a-box position="29 -0.4 1" repeat="20 20" rotation="0 0 90" width="0.5" height="5" depth="5" scale="1 21 15" src="#wsbc">
         </a-box>
         <!-- ferns -->
         <a-box color=" rgba(227, 214, 193, 0.149)" height="7" width="41" depth="0.5" scale="2 1 1" position="25 0.5 -36" rotation="0 0 0"></a-box>
@@ -69,27 +69,27 @@
 
         <!-- front mesh -->
         <?php for ($i = -15; $i < 67; $i++) {
-            if ($i%9==0){
-               ?> <a-cylinder radius="0.8" color=" rgb(172, 166, 166)" height="8" position="<?php echo $i . " " ?> 4 -36" rotation="0 -90 0"></a-cylinder>
+            if ($i % 9 == 0) {
+        ?> <a-cylinder radius="0.8" color=" rgb(172, 166, 166)" height="8" position="<?php echo $i . " " ?> 4 -36" rotation="0 -90 0"></a-cylinder>
 
-            <?php }
-            else{
+            <?php } else {
             ?>
-                <a-cylinder radius="0.1" color=" rgb(98, 98, 98)" height="7" position="<?php echo $i . " ".(sin($i )+6) ?> -36" rotation="0 -90 0"></a-cylinder>
-                <a-sphere radius="0.2" color=" rgb(98, 98, 98)" position="<?php echo $i . " ".(sin($i)+9.5) ?>  -36" rotation="0 -90 0"></a-sphere>
-            <?php }}
+                <a-cylinder radius="0.1" color=" rgb(98, 98, 98)" height="7" position="<?php echo $i . " " . (sin($i) + 6) ?> -36" rotation="0 -90 0"></a-cylinder>
+                <a-sphere radius="0.2" color=" rgb(98, 98, 98)" position="<?php echo $i . " " . (sin($i) + 9.5) ?>  -36" rotation="0 -90 0"></a-sphere>
+        <?php }
+        }
         ?>
 
         <!-- beds Prof. , Thomas, Obaa -->
 
         <a-box position="13 1 16" rotation="0 -90 -90" width="1" height="1" depth="1" scale="2 6 9" src="#surface"></a-box>
-        <a-box position="13 1.8 16" rotation="0 -90 -90" width="1" height="1" depth="1" scale="1 6 9" ></a-box>
+        <a-box position="13 1.8 16" rotation="0 -90 -90" width="1" height="1" depth="1" scale="1 6 9"></a-box>
 
         <a-box position="-4 0.7 -2.5" rotation="0 0 90" width="1" height="1" depth="1" scale="1 7 9" src="#surface"></a-box>
         <a-box position="-4 2 -2.5" rotation="0 0 90" width="1" height="1" depth="1" scale="0.2 7 9"></a-box>
 
         <a-box position="39 1 15.5" rotation="0 0 90" width="1" height="1" depth="1" scale="2 6 9" src="#surface"></a-box>
-        <a-box position="39 2 15.5" rotation="0 0 90" width="1" height="1" depth="1" scale="2 6 9" ></a-box>
+        <a-box position="39 2 15.5" rotation="0 0 90" width="1" height="1" depth="1" scale="2 6 9"></a-box>
         <!-- Fridge -->
         <a-box position="8.5 2.6 -13.5" rotation="0 0 90" width="1" height="1" depth="1" scale="5 3 2" src="#" color="gray"></a-box>
         <a-box position="-4.7 3 -14.5" rotation="0 0 90" width="1" height="1" depth="1" scale="7 6 0.1" src="#surface"></a-box>
@@ -283,13 +283,28 @@
         <!-- Milo tin -->
         <a-cylinder position="14.4 3.3 -3" height="0.7" radius="0.25" src="#Milo"></a-cylinder>
 
+        <!-- Left White Ceramic Cup -->
+        
+        <a-cylinder position="13.4 3.3 -3" height="0.5" radius="0.25" color="lightgreen"></a-cylinder>
+        <a-cylinder position="13.4 3.3 -3" height="0.63" radius="0.18" color="black"></a-cylinder>
+        <a-torus position="13.6 3.3 -3" radius="0.1" radius-tubular="0.02" rotation="0 0 0" color="white"></a-torus>
+        <a-circle position="13.4 3.4 -3" radius="0.17" rotation="-90 0 0" color="#brown"></a-circle> <!-- Tea (Half-Filled) -->
+
+        <!-- Second Cup (1.5 units apart) -->
+        <a-cylinder position="15 3.3 -3" height="0.5" radius="0.25" color="lightgreen"></a-cylinder>
+        <a-cylinder position="15 3.3 -3" height="0.53" radius="0.18" color="black"></a-cylinder>
+        <a-torus position="15.2 3.3 -3" radius="0.1" radius-tubular="0.02" rotation="0 0 0" color="white"></a-torus>
+        <a-circle position="15 3.4 -3" radius="0.17" rotation="-90 0 0" color="#brown"></a-circle> <!-- Tea (Half-Filled) -->
+
+
+
         <!-- Milk tin -->
         <a-cylinder position="14.4 3.0 -2.5" height="0.3" radius="0.14" src="#Milk" repeat="3"></a-cylinder>
-
         <a-sun intensity="20"></a-sun>
         <a-entity position="-5 5 -55" rotation="0 180 0">
             <a-camera
-                user-height="0.6">
+                user-height="0.6" position="0 1.6 0">
+                <a-cursor></a-cursor>
 
             </a-camera>
         </a-entity>
